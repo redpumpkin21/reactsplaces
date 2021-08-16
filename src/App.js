@@ -4,8 +4,6 @@ import './App.css';
 import Display from "./Display";
 import Form from "./Form";
 
-
-
 function App() {
   const url = "https://place-api-628-cj.herokuapp.com"
 
@@ -22,16 +20,16 @@ const [selectedPlace, setSelectedPlace] = useState(emptyPlace)
 const getPlaces = () => {
   fetch(url + '/places')
   .then((response) => response.json())
-  .then((data) => setPlaces(data))
+  .then((data) => {setPlaces(data)})
 }
 
 useEffect(() => {getPlaces()}, [])
 
 const handleCreate = (newPlace) => {
   fetch(url + '/places', {
-    method: 'post',
-    header: {
-      "conent-type": "application/json"
+    method: "post",
+    headers: {
+      "Content-Type": "application/json"
     },
     body: JSON.stringify(newPlace)
   }).then(() => {

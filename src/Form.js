@@ -10,7 +10,7 @@ const Form = (props) => {
     }
 
     const handleChange = (event) => {
-        setFormData({...formData, [event.target.name]: event.target.value })
+        setFormData({ ...formData, [event.target.name]: event.target.value })
     }
     return(
         <form onSubmit = {handleSubmit}>
@@ -18,19 +18,19 @@ const Form = (props) => {
                 type = 'text'
                 name = 'name'
                 value = {formData.name}
-                onchange = {handleChange}
+                onChange = {handleChange}
                 />
              <input
                 type = 'text'
                 name = 'img'
                 value = {formData.img}
-                onchange = {handleChange}
+                onChange = {handleChange}
                 />
              <input
                 type = 'text'
                 name = 'description'
                 value = {formData.description}
-                onchange = {handleChange}
+                onChange = {handleChange}
                 />
            <input type="submit" value={props.label} />
         </form>
