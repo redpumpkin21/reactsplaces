@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
 .App {
   text-align: center;
   background-image: url("https://i.pinimg.com/originals/f6/af/c6/f6afc605ed57bc581c5bc180bf72309e.jpg");
@@ -6,8 +8,13 @@
 }
 
 article img{
-  width: 380px;
+  width: 400px;
   height: 350px;
+}
+article{
+  font-family: 'MedievalSharp', cursive;
+  color: #8B0101;
+  
 }
 
 h1{
